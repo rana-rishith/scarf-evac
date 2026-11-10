@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Coursework deliverables live beside this repo but are not part of it.
+# Listed here so that `git add .` cannot sweep them in by accident.
+*.pptx
+*.docx
+*.pdf
+figs/
+ablation.json
+ablation.py
+build_report*.py
+report_part*.py
+report_figures.py
+check_report.py
+check_ste.py
+docs/arch_for_report.png
