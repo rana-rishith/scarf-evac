@@ -1,0 +1,256 @@
+{
+  "name": "ward_icu_12",
+  "dt": 30,
+  "horizon": 160,
+  "safety_margin": 1,
+  "vertices": [
+    {
+      "id": "c1",
+      "kind": "transit",
+      "capacity": 12,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU corridor 1"
+    },
+    {
+      "id": "c2",
+      "kind": "transit",
+      "capacity": 12,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU corridor 2"
+    },
+    {
+      "id": "c3",
+      "kind": "transit",
+      "capacity": 12,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU corridor 3"
+    },
+    {
+      "id": "pod1",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 3,
+      "patients": {
+        "3": 3
+      },
+      "acuity": 1.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU pod 1"
+    },
+    {
+      "id": "pod2",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 3,
+      "patients": {
+        "3": 3
+      },
+      "acuity": 1.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU pod 2"
+    },
+    {
+      "id": "pod3",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 3,
+      "patients": {
+        "3": 3
+      },
+      "acuity": 1.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU pod 3"
+    },
+    {
+      "id": "pod4",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 3,
+      "patients": {
+        "3": 3
+      },
+      "acuity": 1.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU pod 4"
+    },
+    {
+      "id": "ns",
+      "kind": "transit",
+      "capacity": 8,
+      "staff": 2,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "ICU central station"
+    },
+    {
+      "id": "rn",
+      "kind": "refuge",
+      "capacity": 8,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "North compartment refuge"
+    },
+    {
+      "id": "rs",
+      "kind": "refuge",
+      "capacity": 8,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "South compartment refuge"
+    },
+    {
+      "id": "land",
+      "kind": "transit",
+      "capacity": 6,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 3,
+      "label": "Stair landing"
+    },
+    {
+      "id": "ground",
+      "kind": "exit",
+      "capacity": null,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 0,
+      "label": "Final exit"
+    }
+  ],
+  "arcs": [
+    {
+      "u": "c1",
+      "v": "c2",
+      "tau": 10.0,
+      "clear_width_mm": 2150,
+      "kind": "corridor",
+      "corridor": "c1|c2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "c2",
+      "v": "c3",
+      "tau": 10.0,
+      "clear_width_mm": 2150,
+      "kind": "corridor",
+      "corridor": "c2|c3",
+      "extra_escorts": 0
+    },
+    {
+      "u": "pod1",
+      "v": "c1",
+      "tau": 2.5,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "c1|pod1",
+      "extra_escorts": 0
+    },
+    {
+      "u": "pod2",
+      "v": "c1",
+      "tau": 2.5,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "c1|pod2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "pod3",
+      "v": "c3",
+      "tau": 2.5,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "c3|pod3",
+      "extra_escorts": 0
+    },
+    {
+      "u": "pod4",
+      "v": "c3",
+      "tau": 2.5,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "c3|pod4",
+      "extra_escorts": 0
+    },
+    {
+      "u": "ns",
+      "v": "c2",
+      "tau": 3.3,
+      "clear_width_mm": 2150,
+      "kind": "corridor",
+      "corridor": "c2|ns",
+      "extra_escorts": 0
+    },
+    {
+      "u": "c1",
+      "v": "rn",
+      "tau": 3.3,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "c1|rn",
+      "extra_escorts": 0
+    },
+    {
+      "u": "c3",
+      "v": "rs",
+      "tau": 3.3,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "c3|rs",
+      "extra_escorts": 0
+    },
+    {
+      "u": "c2",
+      "v": "land",
+      "tau": 4.2,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "c2|land",
+      "extra_escorts": 0
+    },
+    {
+      "u": "land",
+      "v": "ground",
+      "tau": 40.0,
+      "clear_width_mm": 1200,
+      "kind": "stair",
+      "corridor": "ground|land",
+      "extra_escorts": 1
+    }
+  ],
+  "hazard": [
+    {
+      "vertex": "c2",
+      "start": 6,
+      "spread_factor": 60.0
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "name": "two_floor_block",
+  "dt": 30,
+  "horizon": 160,
+  "safety_margin": 1,
+  "vertices": [
+    {
+      "id": "f1c1",
+      "kind": "transit",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 corridor 1"
+    },
+    {
+      "id": "f1c2",
+      "kind": "transit",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 corridor 2"
+    },
+    {
+      "id": "f1b1",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 2,
+      "patients": {
+        "1": 2,
+        "2": 2,
+        "3": 1
+      },
+      "acuity": 0.5,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 bay 1"
+    },
+    {
+      "id": "f1b2",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 1,
+      "patients": {
+        "1": 2,
+        "2": 2,
+        "3": 1
+      },
+      "acuity": 0.5,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 bay 2"
+    },
+    {
+      "id": "f1r",
+      "kind": "refuge",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 refuge"
+    },
+    {
+      "id": "f1land",
+      "kind": "transit",
+      "capacity": 6,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 1,
+      "label": "Floor 1 stair landing"
+    },
+    {
+      "id": "f2c1",
+      "kind": "transit",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 corridor 1"
+    },
+    {
+      "id": "f2c2",
+      "kind": "transit",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 corridor 2"
+    },
+    {
+      "id": "f2b1",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 2,
+      "patients": {
+        "1": 2,
+        "2": 2,
+        "3": 1
+      },
+      "acuity": 0.6000000000000001,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 bay 1"
+    },
+    {
+      "id": "f2b2",
+      "kind": "occupied",
+      "capacity": 10,
+      "staff": 1,
+      "patients": {
+        "1": 2,
+        "2": 2,
+        "3": 1
+      },
+      "acuity": 0.6000000000000001,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 bay 2"
+    },
+    {
+      "id": "f2r",
+      "kind": "refuge",
+      "capacity": 10,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 refuge"
+    },
+    {
+      "id": "f2land",
+      "kind": "transit",
+      "capacity": 6,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 2,
+      "label": "Floor 2 stair landing"
+    },
+    {
+      "id": "ground",
+      "kind": "exit",
+      "capacity": null,
+      "staff": 0,
+      "patients": {},
+      "acuity": 0.0,
+      "defer_until": 0,
+      "floor": 0,
+      "label": "Final exit"
+    }
+  ],
+  "arcs": [
+    {
+      "u": "f1c1",
+      "v": "f1c2",
+      "tau": 13.3,
+      "clear_width_mm": 2150,
+      "kind": "corridor",
+      "corridor": "f1c1|f1c2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f1b1",
+      "v": "f1c1",
+      "tau": 2.1,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "f1b1|f1c1",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f1b2",
+      "v": "f1c2",
+      "tau": 2.1,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "f1b2|f1c2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f1c2",
+      "v": "f1r",
+      "tau": 3.3,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "f1c2|f1r",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f1c1",
+      "v": "f1land",
+      "tau": 4.2,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "f1c1|f1land",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2c1",
+      "v": "f2c2",
+      "tau": 13.3,
+      "clear_width_mm": 2150,
+      "kind": "corridor",
+      "corridor": "f2c1|f2c2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2b1",
+      "v": "f2c1",
+      "tau": 2.1,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "f2b1|f2c1",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2b2",
+      "v": "f2c2",
+      "tau": 2.1,
+      "clear_width_mm": 1100,
+      "kind": "door",
+      "corridor": "f2b2|f2c2",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2c2",
+      "v": "f2r",
+      "tau": 3.3,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "f2c2|f2r",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2c1",
+      "v": "f2land",
+      "tau": 4.2,
+      "clear_width_mm": 1800,
+      "kind": "door",
+      "corridor": "f2c1|f2land",
+      "extra_escorts": 0
+    },
+    {
+      "u": "f2land",
+      "v": "f1land",
+      "tau": 20.0,
+      "clear_width_mm": 1200,
+      "kind": "stair",
+      "corridor": "f1land|f2land",
+      "extra_escorts": 1
+    },
+    {
+      "u": "f1land",
+      "v": "ground",
+      "tau": 10.0,
+      "clear_width_mm": 1200,
+      "kind": "stair",
+      "corridor": "f1land|ground",
+      "extra_escorts": 1
+    }
+  ],
+  "hazard": [
+    {
+      "vertex": "f2b1",
+      "start": 4,
+      "spread_factor": 60.0
+    }
+  ]
+}
